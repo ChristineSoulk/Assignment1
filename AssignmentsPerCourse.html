@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="css/HomePageStyle.css"/>
+        <title>Assignments per student per course</title>
+    </head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand">My school</a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="Students.html">Students</a></li>
+            <li><a href="Trainers.html">Trainers</a></li>
+            <li><a href="Assignments.html">Assignments</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" href="#">Courses<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="CoursesList.html">Courses List</a></li>
+                <li><a href="StudentsPerCourse.html">Students per Course</a></li>
+                <li><a href="TrainersPerCourse.html">Trainers per Course</a></li>
+                <li class="active"><a href="AssignmentsPerCourse.html">Assignments per Course</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <br>
+      <br>
+      <div class="container">
+        
+        <br>
+
+        <form class="form-horizontal" id="AssignmentsPerCourseForm" action="/action_page.php">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="title">Assignment: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="title" id="title" pattern="[A-Za-z]{0,}" minlength="2"
+                        maxlength="30" value="" required="" placeholder="Enter the assignment">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="description">Course Title: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="description" id="description" pattern="[A-Za-z]{0,}" minlength="2"
+                        maxlength="30" value="" required="" placeholder="Enter the description of the subject">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="studentFirstName">Student First Name: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="studentFirstName" id="studentFirstName" pattern="[A-Za-z]{0,}" minlength="2"
+                        maxlength="30" value="" required="" placeholder="Enter the student's first name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="studentLastName">Student Last Name: </label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" name="studentLastName" id="studentLastName" pattern="[A-Za-z]{0,}" minlength="2"
+                        maxlength="30" value="" required="" placeholder="Enter the student's last name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="oralMark">Oral Mark: </label>
+                <div class="col-sm-10">
+                    <input type="number" name="studentOralMark" id="studentOralMark" pattern="{0,}" max="100" min="0" class="form-control"
+                        value="" required="" placeholder="Enter the oral mark">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="totalMark">Total Mark: </label>
+                <div class="col-sm-10">
+                    <input type="number" name="studentTotalMark" id="studentTotalMark" pattern="{0,}" max="100" min="0" class="form-control"
+                        value="" required="" placeholder="Enter the total mark">
+                </div>
+            </div>
+
+            <div class="wrapper">
+                <button type="submit" id="submit">Submit</button>
+                <button type="submit" id="update" hidden>Update</button>
+                <button type="reset" id="reset">Reset</button>
+                <br>
+            </div>
+        </form>
+        <div id="AssignmentsPerCourse">
+
+        </div>
+    </div>
+    <script src="AssignmentsPerCourse.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+    
+</body>
+</html>

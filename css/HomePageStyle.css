@@ -1,0 +1,18 @@
+body {
+    background-image: url(../img/Background.jpg);
+}
+
+#welcome{
+    text-align: center;
+    color: floralwhite;
+}
+
+.container{
+    background-color: floralwhite;
+    opacity: 1;
+    padding: 50px;
+}
+
+.wrapper{
+    text-align: center;
+}
